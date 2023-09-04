@@ -1,0 +1,268 @@
+/* Reset some default styles */
+html, body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 1.5;
+}
+
+h1, h2 {
+	font-family: 'Fjalla One', sans-serif;
+}
+
+
+/* Header */
+header {
+  background: rgb(73,73,73);
+  background: linear-gradient(90deg, rgba(73,73,73,1) 0%, rgba(255,255,255,1) 50%, rgba(73,73,73,1) 100%);
+  color: #000000;
+}
+
+/* Navigation */
+nav {
+   background-color: #000000;
+  color: #000000;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+}
+
+nav ul li {
+  flex-grow: 1;
+  text-align: center;
+ 
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px;
+  color: #ffff;
+  text-decoration: none;
+  font-family: 'Fjalla One', sans-serif;
+  border-radius:20px 20px 0px 0px;
+}
+
+nav ul li a:hover {
+  background-color: #8c8c8c;
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    text-align: left;
+  }
+
+  nav ul li a {
+    padding: 10px 20px;
+  }
+}
+
+
+
+/* Main Content */
+main {
+  padding: 0px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 24px;
+  font-family: 'Fjalla One', sans-serif;
+  font-size:35px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+	font-size: 20px;
+}
+
+#int {
+  margin-left: 20px; /* Adjust the value as needed */
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.section-title {
+  margin-left: 20px;
+}
+
+.intro-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.intro-text {
+  flex: 2;
+  margin-right: 20px; /* Adjust the margin as needed */
+  margin-left: 35px;
+  padding-left: 70px;
+}
+
+.photo-container {
+  flex: 1;
+  max-width: 100%;
+  margin-top: 10px; /* Add some spacing between text and photo on smaller screens */
+  margin-right:80px;
+  margin-left: 20px;
+}
+
+.intro-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+  .intro-container {
+    flex-direction: column;
+  }
+  
+  .intro-text {
+    flex: none;
+    margin-right: 0;
+    margin-bottom: 10px; /* Add some spacing between text and photo on smaller screens */
+  }
+  
+  .photo-container {
+    flex: none;
+    max-width: 100%;
+  }
+}
+
+
+
+/* Poetry Section */
+details {
+  margin-bottom: 10px;
+}
+
+summary {
+  cursor: pointer;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size:25px;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:after {
+  content: '+';
+  display: inline-block;
+  margin: 15px;
+}
+
+details[open] summary:after {
+  content: '-';
+}
+
+details pre {
+  margin: 20px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size:20px;
+}
+#poetry {
+  margin-left: 100px; /* Adjust the value as needed */
+  margin-top: 30px;
+  margin-bottom: 80px;
+  height: 100%;
+}
+
+/* Photography Section */
+
+#photography {
+	margin-left: 125px;
+	margin-right: auto;
+	margin-top: 60px;
+	margin-bottom: 100px;
+	height: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 20%;
+  max-width: 20%;
+  padding: 0 10px;
+}
+
+.column img {
+  padding: 10px;
+  vertical-align: middle;
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
+/* Contacts Section */
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.section-title {
+  margin-left: 60px;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  width: 66.66%; /* 2/3 of the width */
+  margin-left: 50px;
+}
+
+.contact-links a {
+  display: inline-block;
+  padding: 40px;
+  margin: 30px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
