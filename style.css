@@ -1,4 +1,4 @@
-/* Reset some default styles */
+
 html, body, ul {
   margin: -12px;
   padding: 0;
@@ -9,19 +9,22 @@ body {
   line-height: 1.5;
 }
 
+.dark-mode {
+  background-color: #333; 
+  color: #fff; 
+}
+
 h1, h2 {
 	font-family: 'Fjalla One', sans-serif;
 }
 
 
-/* Header */
 header {
   background: rgb(73,73,73);
   background: linear-gradient(90deg, rgba(73,73,73,1) 0%, rgba(255,255,255,1) 50%, rgba(73,73,73,1) 100%);
   color: #000000;
 }
 
-/* Navigation */
 nav {
    background-color: #000000;
   color: #000000;
@@ -53,7 +56,7 @@ nav ul li a:hover {
   background-color: #8c8c8c;
 }
 
-/* Media Query for smaller screens */
+
 @media screen and (max-width: 768px) {
   nav ul {
     flex-direction: column;
@@ -70,7 +73,6 @@ nav ul li a:hover {
 
 
 
-/* Main Content */
 main {
   padding: 0px;
 }
@@ -96,7 +98,7 @@ p {
 }
 
 #int {
-  margin-left: 20px; /* Adjust the value as needed */
+  margin-left: 20px;
 }
 
 #home {
@@ -116,7 +118,7 @@ p {
 
 .intro-text {
   flex: 2;
-  margin-right: 20px; /* Adjust the margin as needed */
+  margin-right: 20px; 
   margin-left: 35px;
   padding-left: 70px;
 }
@@ -124,7 +126,7 @@ p {
 .photo-container {
   flex: 1;
   max-width: 100%;
-  margin-top: 10px; /* Add some spacing between text and photo on smaller screens */
+  margin-top: 10px; 
   margin-right:80px;
   margin-left: 20px;
 }
@@ -136,7 +138,6 @@ p {
   border-radius: 5px;
 }
 
-/* Media Query for smaller screens */
 @media screen and (max-width: 768px) {
   .intro-container {
     flex-direction: column;
@@ -145,7 +146,7 @@ p {
   .intro-text {
     flex: none;
     margin-right: 0;
-    margin-bottom: 10px; /* Add some spacing between text and photo on smaller screens */
+    margin-bottom: 10px; 
   }
   
   .photo-container {
@@ -156,7 +157,7 @@ p {
 
 
 
-/* Poetry Section */
+
 details {
   margin-bottom: 10px;
 }
@@ -187,13 +188,13 @@ details pre {
   font-size:20px;
 }
 #poetry {
-  margin-left: 100px; /* Adjust the value as needed */
+  margin-left: 100px; 
   margin-top: 30px;
   margin-bottom: 80px;
   height: 100%;
 }
 
-/* Photography Section */
+
 
 #photography {
 	margin-left: 125px;
@@ -209,7 +210,7 @@ details pre {
   padding: 0 4px;
 }
 
-/* Create four equal columns that sits next to each other */
+
 .column {
   flex: 20%;
   max-width: 20%;
@@ -223,7 +224,7 @@ details pre {
   border-radius: 20px;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
+
 @media screen and (max-width: 800px) {
   .column {
     flex: 50%;
@@ -231,7 +232,7 @@ details pre {
   }
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
 @media screen and (max-width: 600px) {
   .column {
     flex: 100%;
@@ -240,7 +241,7 @@ details pre {
 }
 
 
-/* Contacts Section */
+
 #contact {
   display: flex;
   flex-direction: column;
@@ -254,7 +255,7 @@ details pre {
 .contact-links {
   display: flex;
   flex-wrap: wrap;
-  width: 66.66%; /* 2/3 of the width */
+  width: 66.66%; 
   margin-left: 50px;
 }
 
