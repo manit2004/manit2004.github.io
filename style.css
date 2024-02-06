@@ -370,3 +370,106 @@ details pre {
   color: #3498db;
   cursor: pointer;
 }
+
+.blog {
+  margin-bottom: 15px;
+  padding: 20px;
+  border-radius: 15px;
+  margin-left: 70px;
+  margin-right: 70px;
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+}
+.blog-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+  position: relative;
+  display: inline-block;
+}
+.blog-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #3498db;
+  border-radius: 2px;
+  transition: width 0.3s;
+}
+.blog:hover .blog-title::after {
+  width: 80%;
+}
+.blog-title:hover {
+  color: #3498db;
+}
+.blog-content {
+  color: #666;
+  margin-bottom: 20px;
+}
+.blog-content p {
+  margin: 0;
+}
+
+.blog {
+  margin-bottom: 20px;
+  padding: 20px;
+  margin-left: 70px;
+  margin-right: 70px;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+}
+.blog-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+.blog-content {
+  color: #666;
+  margin-bottom: 20px;
+}
+.blog-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.blog-actions button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.blog-like-count {
+  margin-left: 10px;
+}
+.blog-comments {
+  margin-top: 20px;
+}
+.comment-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.comment-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.comment {
+  background-color: #f0f0f0;
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog 1</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js" ></script>
+  <meta name="google-site-verification" content="0dabyVooNMI5gMBX1x2Q_luQoUemA6Ps4JZCJQXQrBk" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3785670724469744"
+     crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Josefin+Sans:wght@500&family=Ubuntu&display=swap" rel="stylesheet">
+ <link rel="icon" type="image/x-icon" href="me.ico">
+ <script>
+    function like(blogId) {
+        let likes = localStorage.getItem(`likes_${blogId}`) || 0;
+        likes = parseInt(likes) + 1;
+        document.getElementById(`likes_${blogId}`).innerText = likes;
+        localStorage.setItem(`likes_${blogId}`, likes);
+    }
+
+    function addComment(blogId) {
+        const commentText = document.getElementById(`comment_${blogId}`).value;
+        if (commentText.trim() !== '') {
+            let comments = JSON.parse(localStorage.getItem(`comments_${blogId}`)) || [];
+            comments.push(commentText);
+            localStorage.setItem(`comments_${blogId}`, JSON.stringify(comments));
+            displayComments(blogId);
+            document.getElementById(`comment_${blogId}`).value = '';
+        }
+    }
+
+    function displayComments(blogId) {
+        const comments = JSON.parse(localStorage.getItem(`comments_${blogId}`)) || [];
+        const commentsContainer = document.getElementById(`comment_list_${blogId}`);
+        commentsContainer.innerHTML = '';
+        comments.forEach(comment => {
+            const li = document.createElement('li');
+            li.classList.add('comment');
+            li.textContent = comment;
+            commentsContainer.appendChild(li);
+        });
+    }
+    function loadInitialValues() {
+        displayComments('blog1');
+        const likes_blog1 = localStorage.getItem('likes_blog1') || 0;
+        document.getElementById('likes_blog1').innerText = likes_blog1;
+    }
+
+    window.onload = loadInitialValues;
+</script>
+</head>
+<body>
+  <header>
+    <h1 style="text-align:center; padding-top: 25px;">Manit Roy<h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="acheivement.html">Acheivements</a></li>
+        <li><a href="photos.html">Photography</a></li>
+        <li><a href="poems.html">Blog</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="blog" id="blog1">
+    <div class="blog-title">Hypocrisy</div>
+    <div class="blog-content">
+        <pre>
+You want the thrill not the danger,
+You want sucess but don't want the labour,
+You want to dance in rain but don't want fever.
+You want the love but no pain,
+You want to be wanderlust but feared of uncertain.
+You want the roses but you're scared of thorn,
+You ignored but now feel the absence when they're gone.
+You want the independence without being responsible,
+You want them to adjust but you can't be flexible.
+You love the sunlight but you don't want a tan,
+She may act like a child but wants a man.
+You want to stay high but don't want a hangover,
+You shame fake people but you aren't  real either,
+She didn't treat you well but you still love her.
+You want to fly but you are afraid of falling,
+You aren't ready to love but it's love which you're craving.</pre>
+    </div>
+    <div class="blog-actions">
+        <div>
+            <button onclick="like('blog1')">Like</button>
+            <span class="blog-like-count" id="likes_blog1">0</span> Likes
+        </div>
+    </div>
+    <div class="blog-comments">
+        <h3>Comments</h3>
+        <input type="text" class="comment-input" id="comment_blog1" placeholder="Add a comment...">
+        <button onclick="addComment('blog1')" style="margin-bottom: 10px; margin-top: 6px;">Add Comment</button>
+        <ul class="comment-list" id="comment_list_blog1"></ul>
+    </div>
+</div>
+  
+  
+</body>
+</html>
